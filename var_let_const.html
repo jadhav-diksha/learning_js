@@ -21,6 +21,42 @@
         //const pi=3.14 redecalre not allow
         // pi=78.9;
         document.write(pi);
+        document.write("<br>");
+    </script>
+
+
+    <script>
+        // global scope
+        var x=100;
+        var y=200;
+        const z=102;
+
+        function scopeexample(){
+          var x=1; // function scope
+          let y=2; // block scope
+          const z=3; //block scope
+          if(true)  //inside the function
+          {  
+          var x=10; // x reassign value
+          let y=20; // block scope
+          const z=30; // block scope
+          document.write(x); //10
+          document.write(y); //20
+          document.write(z); //30
+           document.write("<br>");
+          }
+        //   outside function
+           document.write(x); //10
+          document.write(y); //2
+          document.write(z); //3
+           document.write("<br>");
+        }
+         document.write(x); //100
+          document.write(y); //101
+          document.write(z); //102
+           document.write("<br>");
+        
+        scopeexample();
     </script>
 </body>
 </html>
